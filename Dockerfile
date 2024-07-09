@@ -13,7 +13,7 @@ ENV MLFLOW_S3_ENDPOINT_URL=https://s3.amazonaws.com
 
 
 
-EXPOSE 8080
+EXPOSE 8080:80
 
 
 CMD ["sh", "-c", "mlflow server --backend-store-uri sqlite:///app/mlflow/mlflow.db --default-artifact-root s3://quizizz-ml-adhoc/mlflow-artifacts --host 0.0.0.0 --port 8080"]
